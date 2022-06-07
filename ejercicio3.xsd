@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!--Elementos simples  -->
+    <xs:element name="codigo" type="xs:string"/>
+    <xs:element name="nombre" type="xs:string"/>
+    <xs:element name="descripcion" type="xs:string"/>
+
+    <!--Elementos complejos -->
+    <xs:element name="monitor" type="atributosproductos"/>
+    <xs:element name="teclado" type="atributosproductos"/>
+    <xs:element name="raton" type="atributosproductos"/>
+
+    <!--Elementos complejos -->
+    <xs:element name="producto">
+        <xs:complexType>
+            <xs:choice minOccurs="1" maxOccurs="1">
+                <xs:element ref="monitor"/>
+                <xs:element ref="teclado"/>
+                <xs:element ref="raton"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    <!-- Elemento Raiz -->
+    <xs:element name="productos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="producto" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:complexType name="atributosproductos">
+        <xs:sequence>
+            <xs:element ref="codigo"/>
+            <xs:element ref="nombre" minOccurs="0"/>
+            <xs:element ref="descripcion" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio3.xsd">
+    <producto>
+        <monitor>
+            <codigo>MO12</codigo>
+            <nombre>Monitor BENQ</nombre>
+        </monitor>
+    </producto>
+    <producto>
+        <raton>
+            <codigo>RA13</codigo>
+            <descripcion>Mouse inalambrico de la marca Logitech</descripcion>
+        </raton>
+    </producto>
+</productos>
+
